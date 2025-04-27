@@ -7,7 +7,6 @@ import { addContact } from "../../redux/contactsSlice";
 
 const ContactForm = () => {
 
-    //const contacts = useSelector((state) => state.contacts.contacts.items);
     const dispatch = useDispatch();
 
     const handleSubmit = (values) => {
@@ -17,8 +16,6 @@ const ContactForm = () => {
         number: values.number   
         };
         dispatch(addContact(newContact));
-
-    // setContacts([...contacts, newContact]);
     };
 
     const validationSchema = Yup.object({
