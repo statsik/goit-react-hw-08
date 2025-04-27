@@ -13,7 +13,7 @@ const ContactForm = () => {
         const newContact = {
         id: nanoid(),   
         name: values.name,
-        number: values.number   
+        number: values.number,
         };
         dispatch(addContact(newContact));
     };
