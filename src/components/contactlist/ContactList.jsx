@@ -6,10 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const ContactList = () => { 
     const dispatch = useDispatch();
-    //const contactsNoFiltered = useSelector(selectContacts);
     const handleDelete = id => dispatch(deleteContact(id));
-
-    //const filter = useSelector(selectFilteredContacts);
 
     const contacts = useSelector(selectFilteredContacts);
     return (
