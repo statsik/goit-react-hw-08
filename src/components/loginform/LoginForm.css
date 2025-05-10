@@ -1,0 +1,9 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-part{
+    font-size: 20px;
+    color: #2c3e50;
+}

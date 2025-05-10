@@ -1,0 +1,11 @@
+.authnav-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.navlink-part{
+    font-size: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
