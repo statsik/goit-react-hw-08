@@ -13,26 +13,36 @@ const LoginSchema = Yup.object().shape({
 const LoginForm = () => {
     const dispatch = useDispatch();
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      const form = e.currentTarget;
+    // const handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   const form = e.currentTarget;
   
-      dispatch(
-        login({
-          email: form.elements.email.value,
-          password: form.elements.password.value,
-        })
-      )
-        .unwrap()
-        .then(() => {
-          console.log('login success');
-        })
-        .catch(() => {
-          console.log('login error');
-        });
+    //   dispatch(
+    //     login({
+    //       email: form.elements.email.value,
+    //       password: form.elements.password.value,
+    //     })
+    //   )
+    //     .unwrap()
+    //     .then(() => {
+    //       console.log('login success');
+    //     })
+    //     .catch(() => {
+    //       console.log('login error');
+    //     });
   
-      form.reset();
-    };
+    //   form.reset();
+  // };
+  
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      await dispatch(login(values)).unwrap();
+      console.log("login success");
+      resetForm();
+    } catch (error) {
+      console.log("login error", error);
+    }
+  };
   
   return (
     <Formik

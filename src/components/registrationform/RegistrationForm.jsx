@@ -10,7 +10,7 @@ const RegistrationForm = () => {
 
     const initialValues = { 
         name: "",
-        email: "",
+        email: "", 
         password: "",
       };
 
