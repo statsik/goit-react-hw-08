@@ -8,6 +8,6 @@ const Navigation = () => {
       <NavLink className="navlink" to="/contacts">Contacts</NavLink>
     </nav>
   );
-};
+}; 
 
 export default Navigation;
