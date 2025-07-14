@@ -11,28 +11,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 const LoginForm = () => {
-    const dispatch = useDispatch();
-
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
-    //   const form = e.currentTarget;
-  
-    //   dispatch(
-    //     login({
-    //       email: form.elements.email.value,
-    //       password: form.elements.password.value,
-    //     })
-    //   )
-    //     .unwrap()
-    //     .then(() => {
-    //       console.log('login success');
-    //     })
-    //     .catch(() => {
-    //       console.log('login error');
-    //     });
-  
-    //   form.reset();
-  // };
+  const dispatch = useDispatch();
   
   const handleSubmit = async (values, { resetForm }) => {
     try {
